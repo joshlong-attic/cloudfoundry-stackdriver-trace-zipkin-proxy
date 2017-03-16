@@ -1,0 +1,8 @@
+cf-stackdriver-service-name: proxy-stackdriver-trace
+pkd: ${PRIVATE_KEY_DATA:${vcap.services.${cf-stackdriver-service-name}.credentials.PrivateKeyData:}}
+zipkin:
+  storage:
+
+    type: stackdriver
+    stackdriver:
+      project-id: ${PROJECT_ID:${vcap.services.${cf-stackdriver-service-name}.credentials.ProjectId:}}

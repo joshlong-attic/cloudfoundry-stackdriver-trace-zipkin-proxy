@@ -22,12 +22,19 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<stackdriver.zipkin.version>0.2.1-SNAPSHOT</stackdriver.zipkin.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.cloud.trace.adapters.zipkin</groupId>
+			<artifactId>stackdriver-starter-zipkin-collector</artifactId>
+			<version>${stackdriver.zipkin.version}</version>
 		</dependency>
 
 		<dependency>
