@@ -3,13 +3,12 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.example</groupId>
-	<artifactId>cloudfoundry-stackdriver-trace-zipkin-proxy</artifactId>
+	<groupId>com.google.cloud.stackdriver.zipkin</groupId>
+	<artifactId>stackdriver-zipkin-cf</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>cloudfoundry-stackdriver-trace-zipkin-proxy</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Stackdriver backend for Zipkin on Cloud Foundry </description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -33,7 +32,7 @@
 
 		<dependency>
 			<groupId>com.google.cloud.trace.adapters.zipkin</groupId>
-			<artifactId>stackdriver-starter-zipkin-collector</artifactId>
+			<artifactId>starter</artifactId>
 			<version>${stackdriver.zipkin.version}</version>
 		</dependency>
 
@@ -45,6 +44,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
